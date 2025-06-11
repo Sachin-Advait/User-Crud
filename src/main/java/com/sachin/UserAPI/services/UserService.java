@@ -69,6 +69,8 @@ public class UserService {
         UserEntity existingUser = existingUserOpt.get();
         existingUser.setName(updatedUser.getName());
         existingUser.setEmail(updatedUser.getEmail());
+        existingUser.setGender(updatedUser.getName());
+        existingUser.setJobTitle(updatedUser.getEmail());
 
         return userRepository.save(existingUser);
     }
